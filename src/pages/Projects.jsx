@@ -2,26 +2,28 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
+  const BASE = import.meta.env.BASE_URL; // GitHub Pages base URL
+
   const projects = [
     {
       title: "Travel Website",
       description:
         "Responsive travel site using React, Vite, and Tailwind with search functionality and interactive UI.",
-      image: "/travel website.png",
+      image: `${BASE}travel-website.png`,
       github: "https://github.com/lakshmi7654321?tab=repositories",
     },
     {
       title: "Food Delivery Website",
       description:
         "MERN stack food ordering system with authentication, menu, cart, and order tracking functionality.",
-      image: "/food delivery website.png",
+      image: `${BASE}food-delivery-website.png`,
       github: "https://github.com/lakshmi7654321?tab=repositories",
     },
     {
       title: "House Landing Page",
       description:
         "A modern landing page for real estate listings with responsive design and call-to-action features.",
-      image: "/home landing page.png",
+      image: `${BASE}home-landing-page.png`,
       github: "https://github.com/lakshmi7654321?tab=repositories",
     },
   ];
@@ -41,7 +43,7 @@ export default function Projects() {
               description={p.description}
               image={p.image}
               titleCenter={true}
-              github={p.github} // pass GitHub link
+              github={p.github}
             />
           ))}
         </div>

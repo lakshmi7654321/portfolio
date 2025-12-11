@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -13,11 +12,11 @@ import Contact from "./pages/Contact";
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900 font-sans">
-      {/* Navbar */}
+
       <Navbar />
 
-      {/* Main content */}
-      <main className="flex-1">
+      {/* Clean, even gap */}
+      <main className="flex-1 pt-8">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -27,7 +26,6 @@ export default function App() {
         </Routes>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
